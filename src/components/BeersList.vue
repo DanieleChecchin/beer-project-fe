@@ -21,9 +21,6 @@ export default {
                     // handle error
                     console.log(error);
                 })
-                .finally(function () {
-                    // always executed
-                });
         }
     },
     created() {
@@ -33,7 +30,7 @@ export default {
 </script>
 
 <template>
-
+    <h1> Lista birre components</h1>
 </template>
 
-<style scoped></style>
+<style lang="scss"></style>
