@@ -9,7 +9,7 @@ export default {
         }
     },
     components: {
-        BeersList
+        BeersList,
     }
 }
 </script>
@@ -19,7 +19,7 @@ export default {
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>Lista delle birre</h1>
+                <h1>Lista delle birre pages</h1>
                 <BeersList />
             </div>
         </div>

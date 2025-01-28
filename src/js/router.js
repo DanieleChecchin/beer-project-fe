@@ -1,8 +1,8 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import AppHome from '../pages/AppHome.vue';
-import AppAbout from '../pages/AppAbout.vue';
-import AppBeers from '../pages/AppBeers.vue';
+import AppHome from '../pages/AppHome.vue'
+import AppAbout from '../pages/AppAbout.vue'
+import AppBeers from '../pages/AppBeers.vue'
 
 const routes = [
     { path: '/', redirect: '/beers' }, // Redirect automatico alla route "/beers"
