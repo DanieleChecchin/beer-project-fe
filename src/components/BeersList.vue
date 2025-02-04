@@ -2,6 +2,8 @@
 
 import axios from 'axios';
 
+import BeersListItem from './BeersListItem.vue';
+
 export default {
     name: 'BeersList',
     data() {
@@ -10,12 +12,16 @@ export default {
             beerList: [],
         }
     },
+    components: {
+        BeersListItem
+    },
     methods: {
         getBeers() {
             axios.get(this.apiUrl)
                 .then((response) => {
                     // handle success
-                    console.log(response);
+                    console.log(response.data.result);
+                    this.beerList = response.data.result;
                 })
                 .catch(function (error) {
                     // handle error
@@ -30,7 +36,7 @@ export default {
 </script>
 
 <template>
-    <h1> Lista birre components</h1>
+    <BeersListItem v-for="beer in beerList" :key="beer.id" :beerObj="beer" />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>
